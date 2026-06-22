@@ -34,7 +34,7 @@ export function Judges() {
     >
       <div className="grid gap-8 md:grid-cols-[14rem_1fr] md:gap-12">
         <div className="flex items-baseline gap-3 md:flex-col md:gap-2">
-          <span className="mono text-sm font-semibold tracking-[0.1em] text-forge">04</span>
+          <span className="mono text-sm font-semibold tracking-[0.1em] text-forge">05</span>
           <span className="mono text-xs uppercase tracking-[0.22em] text-ink-faint">Judges &amp; mentors</span>
         </div>
 
@@ -43,7 +43,7 @@ export function Judges() {
             The people in the room with you.
           </h2>
           <p className="mt-4 max-w-[54ch] text-ink-dim">
-            Operators and investors who&apos;ve shipped real Bitcoin products — on the floor while you build,
+            Operators and investors who&apos;ve shipped real Bitcoin products, on the floor while you build,
             on the panel when you demo. Roster locking now.
           </p>
 

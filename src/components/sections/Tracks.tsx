@@ -12,7 +12,7 @@ export function Tracks() {
     >
       <div className="grid gap-8 md:grid-cols-[14rem_1fr] md:gap-12">
         <div className="flex items-baseline gap-3 md:flex-col md:gap-2">
-          <span className="mono text-sm font-semibold tracking-[0.1em] text-forge">02</span>
+          <span className="mono text-sm font-semibold tracking-[0.1em] text-forge">03</span>
           <span className="mono text-xs uppercase tracking-[0.22em] text-ink-faint">Tracks &amp; bounties</span>
         </div>
 
@@ -32,7 +32,7 @@ export function Tracks() {
             ))}
           </ul>
 
-          {/* bounties — a moment, not fine print */}
+          {/* bounties, a moment, not fine print */}
           <div className="mt-10 rounded border border-line bg-bg-2 p-6 md:p-8">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>

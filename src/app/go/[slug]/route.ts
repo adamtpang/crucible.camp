@@ -4,7 +4,7 @@ import { links } from "@config";
 export const dynamic = "force-dynamic";
 
 /**
- * /go/[slug] — attributable outbound redirects for every CTA, sponsor, and partner.
+ * /go/[slug], attributable outbound redirects for every CTA, sponsor, and partner.
  * Slug → destination map lives in event.config.ts (`links`). Unknown slug → home.
  */
 export async function GET(req: NextRequest, ctx: { params: Promise<{ slug: string }> }) {

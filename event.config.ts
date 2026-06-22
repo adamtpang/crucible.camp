@@ -1,8 +1,8 @@
 /* ============================================================================
- * event.config.ts — CRUCIBLE — SINGLE SOURCE OF TRUTH
+ * event.config.ts, CRUCIBLE, SINGLE SOURCE OF TRUTH
  * ----------------------------------------------------------------------------
  * Everything event-specific lives here. Components read from this file and
- * hardcode nothing. To run the NEXT edition, swap values here — not markup.
+ * hardcode nothing. To run the NEXT edition, swap values here, not markup.
  *
  * Search "TODO_" for every value to confirm before launch.
  * ========================================================================== */
@@ -12,11 +12,12 @@ export type Track = { name: string; tag: string; blurb: string };
 export type Bounty = { amount: string; title: string; sponsor?: string; sponsorSlug?: string };
 export type Person = { name: string; role: string; org?: string; confirmed?: boolean };
 export type CoHost = { name: string; slug: string; lane: string };
+export type Audience = { key: string; label: string; value: string; slug: string; cta: string; seats: string };
 export type Partner = { name: string; slug?: string; tier: string };
 export type CtaKind = "primary" | "secondary" | "ghost";
 export type LinkEntry = { label: string; destination: string; kind: CtaKind };
 
-/* ---- /go/[slug] destination map — every outbound click is attributable ----
+/* ---- /go/[slug] destination map, every outbound click is attributable ----
  * UI buttons link to internal /go/<slug>; the redirect route appends UTM tags
  * and 302s to `destination`. Edit destinations here without touching markup. */
 export const links: Record<string, LinkEntry> = {
@@ -25,9 +26,13 @@ export const links: Record<string, LinkEntry> = {
   "apply-builder": { label: "Apply as a builder", destination: "https://tally.so/r/TODO_BUILDER_FORM", kind: "primary" },
   // TODO_APPLY_INVESTOR: point at your investor / capital-seat application
   "apply-investor": { label: "Apply as an investor", destination: "https://tally.so/r/TODO_INVESTOR_FORM", kind: "primary" },
+  // TODO_APPLY_INCUBATOR: incubator / accelerator scouting access
+  "apply-incubator": { label: "Scout as an incubator", destination: "https://tally.so/r/TODO_INCUBATOR_FORM", kind: "secondary" },
+  // TODO_APPLY_MEDIA: creators / influencers / press access
+  "apply-media": { label: "Apply for media access", destination: "https://tally.so/r/TODO_MEDIA_FORM", kind: "secondary" },
 
   // ---- secondary CTAs ----
-  // TODO_SPONSOR: Fulgur's capital/partnerships lane — bounty sponsorship inbound
+  // TODO_SPONSOR: Fulgur's capital/partnerships lane, bounty sponsorship inbound
   sponsor: { label: "Sponsor a bounty", destination: "mailto:partners@crucible.camp?subject=Crucible%20bounty%20sponsorship", kind: "secondary" },
   // TODO_MENTOR: judge/mentor application
   mentor: { label: "Become a judge or mentor", destination: "https://tally.so/r/TODO_MENTOR_FORM", kind: "secondary" },
@@ -47,7 +52,7 @@ export const event = {
   /* ---- identity ---- */
   name: "CRUCIBLE",
   // hero positioning line (one sentence). TODO_POSITIONING: tighten if you want.
-  positioning: "A directed 36-hour Bitcoin hackathon. Builders, founders, and capital in one room — forged, not gathered.",
+  positioning: "A directed 36-hour Bitcoin hackathon. Builders, founders, and capital in one room. Forged, not gathered.",
   // used in meta + a one-liner under the pitch
   oneLiner: "36 hours. The best builders in Bitcoin. Real problems, real capital, one room.",
 
@@ -72,18 +77,30 @@ export const event = {
     { name: "Fulgur Ventures", slug: "fulgur", lane: "Capital & partnerships" },
   ] satisfies CoHost[],
 
+  /* ---- who's in the room: four audiences, one switchboard ----
+   * Every CTA routes through /go/<slug> so each audience is attributable.
+   * TODO_SEATS: confirm the real capacity numbers (they double as scarcity). */
+  connectivity:
+    "Crucible is run like a switchboard. Builders, investors, incubators, and the people who tell the story are in one room on purpose, matched by hand, not left to a name-tag scramble.",
+  audiences: [
+    { key: "builders", label: "Engineers", value: "Ship something real in 36 hours. Mentors on the floor, capital in the room, and a stage that actually gets watched.", slug: "apply-builder", cta: "Apply as a builder", seats: "50 team seats" },
+    { key: "investors", label: "Investors", value: "Meet the teams while the code is still warm. First look and first check, before the round is a round.", slug: "apply-investor", cta: "Apply as an investor", seats: "20 investor seats" },
+    { key: "incubators", label: "Incubators", value: "Source your next cohort under real pressure. Watch 50 teams build, then take the best ones home.", slug: "apply-incubator", cta: "Scout as an incubator", seats: "10 partner slots" },
+    { key: "media", label: "Creators & media", value: "The story builds itself. Get the room, the footage, and the founders before anyone else has them.", slug: "apply-media", cta: "Apply for media access", seats: "12 media passes" },
+  ] satisfies Audience[],
+
   /* ---- the pitch: why this is directed, not a room with deadlines ---- */
   pitch: [
     "Most hackathons hand you a room, a deadline, and a sponsor table, then disappear.",
-    "Crucible is directed. The problem set is curated, the run of show is produced, and there is no dead air — every hour pulls you toward the next.",
+    "Crucible is directed. The problem set is curated, the run of show is produced, and there is no dead air, every hour pulls you toward the next.",
     "Builders, not spectators. You leave with a thing that works and the people who can fund it.",
   ],
 
-  /* ---- tracks (Bitcoin-focused) — add/remove freely ---- */
+  /* ---- tracks (Bitcoin-focused), add/remove freely ---- */
   tracks: [
     { name: "Lightning", tag: "L2 / payments", blurb: "Payments, streaming sats, and the rails that make Bitcoin spendable at scale." },
     { name: "On-chain", tag: "Protocol / L1", blurb: "Covenants, scripts, mining, and the base layer's genuinely hard problems." },
-    { name: "Tooling", tag: "DevEx / infra", blurb: "Wallets, libraries, node infra — the developer experience the next 10,000 builders need." },
+    { name: "Tooling", tag: "DevEx / infra", blurb: "Wallets, libraries, node infra, the developer experience the next 10,000 builders need." },
     // TODO_TRACKS: add more (Privacy, Custody, AI×BTC…) as the program firms up.
   ] satisfies Track[],
 
@@ -103,9 +120,9 @@ export const event = {
   /* ---- run of show: the produced-experience curve (Doors → Finale) ---- */
   runOfShow: [
     { time: "Fri 18:00", label: "Doors", detail: "Walk in, badge up, first real conversation. No milling, no lanyard limbo." },
-    { time: "Fri 19:00", label: "Kickoff", detail: "Lights down. The problem set, the bounties, and the clock — presented like a premiere, not a briefing." },
+    { time: "Fri 19:00", label: "Kickoff", detail: "Lights down. The problem set, the bounties, and the clock, presented like a premiere, not a briefing." },
     { time: "36 hrs", label: "The Build", detail: "Heads-down. Mentors on the floor, capital in the room, checkpoints that keep the energy from sagging." },
-    { time: "Sun 14:00", label: "Demo Theater", detail: "Every team on a real stage with real production. The audience is judges, founders, and investors — not a hallway." },
+    { time: "Sun 14:00", label: "Demo Theater", detail: "Every team on a real stage with real production. The audience is judges, founders, and investors, not a hallway." },
     { time: "Sun 17:00", label: "Judging", detail: "Live and on the record. Scored against problems that matter, not slide polish." },
     { time: "Sun 19:00", label: "The Finale", detail: "Bounties awarded, capital conversations opened, the night documented. You leave with momentum, not a tote bag." },
   ] satisfies Beat[],
@@ -139,7 +156,7 @@ export const event = {
    * mode: "email"    -> on-site capture via Resend (/api/subscribe)
    *       "embed"    -> drop in a Luma/Tally iframe (embedUrl)
    *       "redirect" -> button bounces through /rsvp to `destination`
-   * Swap the backend by changing `mode` + `destination` — markup stays put. */
+   * Swap the backend by changing `mode` + `destination`, markup stays put. */
   rsvp: {
     mode: "email" as "email" | "embed" | "redirect",
     // TODO_RSVP_DESTINATION: the owned short link /rsvp (and /door) 302s here.
@@ -163,7 +180,7 @@ export const event = {
   seo: {
     url: "https://crucible.camp",
     description:
-      "CRUCIBLE — a directed 36-hour Bitcoin hackathon at Network School. Builders, founders, and capital in one room. Fully documented and livestreamed.",
+      "CRUCIBLE, a directed 36-hour Bitcoin hackathon at Network School. Builders, founders, and capital in one room. Fully documented and livestreamed.",
   },
 };
 

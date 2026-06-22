@@ -2,7 +2,7 @@
   "name": "crucible-camp",
   "version": "1.0.0",
   "private": true,
-  "description": "Landing page for CRUCIBLE — a 36-hour Bitcoin hackathon at Network School. Config-driven template (event.config.ts) so each edition is a config swap, not a rebuild.",
+  "description": "Landing page for CRUCIBLE, a 36-hour Bitcoin hackathon at Network School. Config-driven template (event.config.ts) so each edition is a config swap, not a rebuild.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

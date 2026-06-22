@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CRUCIBLE — "Cold steel, forged hot."
+   CRUCIBLE, "Cold steel, forged hot."
    Cold-charcoal base (unheated steel) + ONE accent: the blackbody heat ramp
    that metal actually glows through as it heats. The orange is earned, not decorative.
    ========================================================================== */
@@ -20,11 +20,11 @@
   /* --- forge heat ramp (the single accent system: real glow-color temperatures) --- */
   --ember:     #8c1a06;   /* ~550C dull red  */
   --heat-red:  #d92b09;   /* red-orange      */
-  --forge:     #ff5a1f;   /* orange — primary UI accent */
+  --forge:     #ff5a1f;   /* orange, primary UI accent */
   --heat-amber:#ff9d2f;   /* amber           */
   --heat-gold: #ffd27a;   /* yellow          */
   --white-hot: #fff4e6;   /* ~1500C+ near-white */
-  --forge-ink: #160a05;   /* near-black warm — text on hot fills */
+  --forge-ink: #160a05;   /* near-black warm, text on hot fills */
 
   --maxw: 1180px;
   --pad: clamp(1.25rem, 5vw, 4rem);
@@ -53,7 +53,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-  /* faint forge warmth seeping up from the floor + cool top — atmosphere, not gradient-soup */
+  /* faint forge warmth seeping up from the floor + cool top, atmosphere, not gradient-soup */
   background-image:
     radial-gradient(120% 80% at 50% 118%, rgba(255, 90, 31, 0.10), transparent 60%),
     radial-gradient(100% 70% at 50% -10%, rgba(120, 150, 210, 0.05), transparent 55%);
@@ -196,7 +196,7 @@ a { color: inherit; text-decoration: none; }
 .readout dt { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); }
 .readout dd { font-size: 0.92rem; letter-spacing: 0.06em; color: var(--ink); font-weight: 500; }
 
-/* heat scale — the accent system made literal */
+/* heat scale, the accent system made literal */
 .heatbar { margin: clamp(1.75rem, 3.5vw, 2.5rem) 0 0; max-width: 640px; }
 .heatbar-track {
   height: 6px; border-radius: 99px;
@@ -259,7 +259,7 @@ a { color: inherit; text-decoration: none; }
   .sec-rail { flex-direction: row; align-items: baseline; gap: 0.8rem; }
 }
 
-/* who — cards */
+/* who, cards */
 .cards { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
   background: var(--line); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
 .card { background: var(--panel); padding: clamp(1.4rem, 2.5vw, 2rem); display: flex; flex-direction: column; gap: 0.75rem; }
@@ -267,7 +267,7 @@ a { color: inherit; text-decoration: none; }
 .card-text { color: var(--ink-dim); font-size: 0.98rem; line-height: 1.55; }
 @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
 
-/* happens — stats */
+/* happens, stats */
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 3vw, 2.5rem); margin: 0 0 2rem; }
 .stat { display: flex; flex-direction: column; gap: 0.35rem; }
 .stat-num {
@@ -280,7 +280,7 @@ a { color: inherit; text-decoration: none; }
 .stat-cap { font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
 @media (max-width: 560px) { .stats { grid-template-columns: 1fr; gap: 1.5rem; } .stat { flex-direction: row; align-items: baseline; gap: 0.9rem; } }
 
-/* backing — partners */
+/* backing, partners */
 .partners {
   list-style: none; padding: 0; margin-top: 2rem;
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;

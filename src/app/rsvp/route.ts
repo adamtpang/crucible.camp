@@ -4,7 +4,7 @@ import { event } from "@config";
 export const dynamic = "force-dynamic";
 
 /**
- * /rsvp — the owned, swappable short link fronted everywhere.
+ * /rsvp, the owned, swappable short link fronted everywhere.
  * 302s to a single config value (event.rsvp.destination) with attribution tags.
  * Swap the destination in event.config.ts; the link you've printed never changes.
  */

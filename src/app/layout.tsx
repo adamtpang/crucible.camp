@@ -4,7 +4,7 @@ import { event } from "@config";
 import { Reveal } from "@/components/Reveal";
 import "./globals.css";
 
-// Archivo as a variable font WITH the width axis (wdth) — that's how we get the
+// Archivo as a variable font WITH the width axis (wdth), that's how we get the
 // expanded display weight. IBM Plex Mono is the instrument/readout voice.
 const archivo = Archivo({
   subsets: ["latin"],
@@ -19,7 +19,7 @@ const mono = IBM_Plex_Mono({
   variable: "--font-mono-ibm",
 });
 
-const title = `${event.name} — A Bitcoin hackathon at ${event.location.venue}`;
+const title = `${event.name}, A Bitcoin hackathon at ${event.location.venue}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(event.seo.url),

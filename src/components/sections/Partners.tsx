@@ -12,7 +12,7 @@ export function Partners() {
     >
       <div className="grid gap-8 md:grid-cols-[14rem_1fr] md:gap-12">
         <div className="flex items-baseline gap-3 md:flex-col md:gap-2">
-          <span className="mono text-sm font-semibold tracking-[0.1em] text-forge">05</span>
+          <span className="mono text-sm font-semibold tracking-[0.1em] text-forge">06</span>
           <span className="mono text-xs uppercase tracking-[0.22em] text-ink-faint">Partners &amp; sponsors</span>
         </div>
 

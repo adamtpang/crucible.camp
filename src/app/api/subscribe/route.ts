@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
 /**
- * POST /api/subscribe — interest capture via Resend.
+ * POST /api/subscribe, interest capture via Resend.
  * Demo-safe: with no RESEND_API_KEY set, it validates and returns { ok, demo:true }
  * so the form works locally before you add keys. With a key, it adds the contact to
  * an audience (if RESEND_AUDIENCE_ID) and notifies the organizer (if RSVP_NOTIFY_EMAIL).
@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
 
   const key = process.env.RESEND_API_KEY;
   if (!key) {
-    // No backend wired yet — succeed in demo mode so the UX is testable.
+    // No backend wired yet, succeed in demo mode so the UX is testable.
     return NextResponse.json({ ok: true, demo: true });
   }
 
@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
       await resend.emails.send({
         from,
         to: notify,
-        subject: `Crucible — new ${role || "RSVP"}: ${email}`,
+        subject: `Crucible, new ${role || "RSVP"}: ${email}`,
         text: `${email} (${role || "n/a"}) joined the Crucible interest list.`,
       });
     }

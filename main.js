@@ -1,4 +1,4 @@
-/* CRUCIBLE — progressive enhancement only. The page works with JS disabled;
+/* CRUCIBLE, progressive enhancement only. The page works with JS disabled;
    this adds an inline form success state and a quiet scroll reveal. */
 
 (function () {
@@ -47,10 +47,10 @@
       return;
     }
 
-    // Endpoint not wired yet — don't fire a broken POST. Guides you, doesn't crash.
+    // Endpoint not wired yet, don't fire a broken POST. Guides you, doesn't crash.
     if (form.action.indexOf("TODO_FORM_ENDPOINT") !== -1) {
       ev.preventDefault();
-      setStatus("Demo mode — set TODO_FORM_ENDPOINT in index.html to go live.", "is-err");
+      setStatus("Demo mode, set TODO_FORM_ENDPOINT in index.html to go live.", "is-err");
       return;
     }
 

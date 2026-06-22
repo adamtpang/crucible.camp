@@ -2,7 +2,7 @@ import { event, go, links, RSVP_HREF } from "@config";
 import { CtaLink } from "@/components/CtaLink";
 import { RsvpForm } from "@/components/RsvpForm";
 
-/* The finale — the single most important conversion moment, loaded toward the back.
+/* The finale, the single most important conversion moment, loaded toward the back.
    Two co-primary apply paths + the RSVP catch-all (backend swappable via config.rsvp.mode). */
 export function Rsvp() {
   const { mode, embedUrl } = event.rsvp;
@@ -35,7 +35,7 @@ export function Rsvp() {
           </CtaLink>
         </div>
 
-        {/* RSVP catch-all — backend swaps via config.rsvp.mode */}
+        {/* RSVP catch-all, backend swaps via config.rsvp.mode */}
         <div className="mt-12 border-t border-line pt-10">
           <p className="mb-5 text-sm text-ink-dim">Not ready to apply? Get the brief and the open call.</p>
 

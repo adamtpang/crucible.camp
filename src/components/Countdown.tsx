@@ -49,7 +49,7 @@ export function Countdown({ targetISO }: { targetISO: string }) {
     >
       {t?.done ? (
         <span className="mono text-forge text-sm tracking-[0.2em] uppercase">
-          Doors are open — we&apos;re live
+          Doors are open, we&apos;re live
         </span>
       ) : (
         cells.map(([label, value], i) => (

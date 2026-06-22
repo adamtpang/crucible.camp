@@ -42,7 +42,7 @@ export function RsvpForm() {
         setStatus({
           kind: "ok",
           msg: json.demo
-            ? "Captured (demo mode — add RESEND_API_KEY to send for real)."
+            ? "Captured (demo mode, add RESEND_API_KEY to send for real)."
             : "You're on the list. We'll send the brief when applications open.",
         });
       } else {

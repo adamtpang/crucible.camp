@@ -16,7 +16,7 @@ export function RunOfShow() {
     >
       <div className="grid gap-8 md:grid-cols-[14rem_1fr] md:gap-12">
         <div className="flex items-baseline gap-3 md:flex-col md:gap-2">
-          <span className="mono text-sm font-semibold tracking-[0.1em] text-forge">03</span>
+          <span className="mono text-sm font-semibold tracking-[0.1em] text-forge">04</span>
           <span className="mono text-xs uppercase tracking-[0.22em] text-ink-faint">The run of show</span>
         </div>
 
@@ -25,7 +25,7 @@ export function RunOfShow() {
             A produced experience. Not a room with a deadline.
           </h2>
           <p className="mt-4 max-w-[56ch] text-ink-dim">
-            Every beat is directed. The energy climbs from the moment doors open to the finale —
+            Every beat is directed. The energy climbs from the moment doors open to the finale, 
             there is no dead air, and there is always a clear next thing to do.
           </p>
 

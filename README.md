@@ -1,4 +1,4 @@
-# CRUCIBLE — crucible.camp
+# CRUCIBLE, crucible.camp
 
 Landing page for **Crucible**, a directed 36-hour Bitcoin hackathon at Network School,
 co-produced by **Viber · The Arc · Fulgur Ventures**.
@@ -87,16 +87,16 @@ Add your env vars in **Vercel → Project → Settings → Environment Variables
 
 ---
 
-## TODO before launch — swap in `event.config.ts`
-- `TODO_APPLY_BUILDER` / `TODO_APPLY_INVESTOR` — real application form URLs (Tally/Typeform/Luma)
-- `TODO_RSVP_DESTINATION` — where `/rsvp` and `/door` point (Luma event, etc.)
-- `TODO_DATE` / `TODO_COUNTDOWN` — real dates + ISO countdown target (with TZ offset)
-- `TODO_LOCATION` — confirm venue + city
-- `TODO_BOUNTIES` — real amounts + sponsors (`sponsorSlug` links the logo via `/go/<slug>`)
-- `TODO_JUDGES` / `TODO_MENTORS` — names as they confirm
-- `TODO_SPONSORS` — sponsor names + add their slug to `links`
-- `TODO_COHOST_URLS` — confirm viber.global / thearccity.com / fulgur.ventures URLs
-- `TODO_CONTACT` / `TODO_LIVESTREAM` / social — footer links
+## TODO before launch, swap in `event.config.ts`
+- `TODO_APPLY_BUILDER` / `TODO_APPLY_INVESTOR`, real application form URLs (Tally/Typeform/Luma)
+- `TODO_RSVP_DESTINATION`, where `/rsvp` and `/door` point (Luma event, etc.)
+- `TODO_DATE` / `TODO_COUNTDOWN`, real dates + ISO countdown target (with TZ offset)
+- `TODO_LOCATION`, confirm venue + city
+- `TODO_BOUNTIES`, real amounts + sponsors (`sponsorSlug` links the logo via `/go/<slug>`)
+- `TODO_JUDGES` / `TODO_MENTORS`, names as they confirm
+- `TODO_SPONSORS`, sponsor names + add their slug to `links`
+- `TODO_COHOST_URLS`, confirm viber.global / thearccity.com / fulgur.ventures URLs
+- `TODO_CONTACT` / `TODO_LIVESTREAM` / social, footer links
 - Resend env vars (above) to take the RSVP form live
 
 > Note: the previous static prototype (`index.html`, `styles.css`, `main.js`, and root-level
