@@ -42,7 +42,7 @@ export function Footer() {
             </a>
           </span>
         </div>
-        <p className="mono mt-4 text-[0.7rem] text-ink-faint/70">Hosted by The Arc.</p>
+        <p className="mono mt-4 text-[0.7rem] text-ink-faint/70">Hosted by Arc.</p>
       </div>
     </footer>
   );

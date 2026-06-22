@@ -1,8 +1,8 @@
 /* ============================================================================
- * event.config.ts, ARC OPEN, SINGLE SOURCE OF TRUTH
+ * event.config.ts, ARC HACKATHON, SINGLE SOURCE OF TRUTH
  * ----------------------------------------------------------------------------
- * Arc Open is an edition of the Crucible hackathon engine: a directed,
- * multi-ecosystem builder weekend hosted by The Arc. The Bitcoin-only version
+ * Arc Hackathon is an edition of the Crucible hackathon engine: a directed,
+ * multi-ecosystem builder weekend hosted by Arc. The Bitcoin-only version
  * was edition zero; this is the Base x Solana x Bitcoin edition. To run the
  * next one, swap values here, not markup. Search "TODO_" before launch.
  * ========================================================================== */
@@ -28,13 +28,13 @@ export const links: Record<string, LinkEntry> = {
   "apply-media": { label: "Apply for media access", destination: "https://tally.so/r/TODO_MEDIA_FORM", kind: "secondary" },
 
   // ---- secondary CTAs ----
-  sponsor: { label: "Sponsor a bounty", destination: "mailto:partners@thearccity.com?subject=Arc%20Open%20sponsorship", kind: "secondary" },
+  sponsor: { label: "Sponsor a bounty", destination: "mailto:partners@thearccity.com?subject=Arc%20Hackathon%20sponsorship", kind: "secondary" },
   mentor: { label: "Become a judge or mentor", destination: "https://tally.so/r/TODO_MENTOR_FORM", kind: "secondary" },
-  partner: { label: "Partner with us", destination: "mailto:hello@thearccity.com?subject=Arc%20Open%20partnership", kind: "secondary" },
+  partner: { label: "Partner with us", destination: "mailto:hello@thearccity.com?subject=Arc%20Hackathon%20partnership", kind: "secondary" },
   livestream: { label: "Watch the livestream", destination: "https://youtube.com/@TODO_CHANNEL", kind: "ghost" },
 
   // ---- host + the three ecosystems, all tracked ----
-  arc: { label: "The Arc", destination: "https://thearccity.com", kind: "ghost" },
+  arc: { label: "Arc", destination: "https://thearccity.com", kind: "ghost" },
   base: { label: "Base", destination: "https://base.org", kind: "ghost" },
   solana: { label: "Solana", destination: "https://solana.com", kind: "ghost" },
   // Bitcoin lane is represented by Fulgur Ventures
@@ -43,14 +43,14 @@ export const links: Record<string, LinkEntry> = {
 
 export const event = {
   /* ---- identity ---- */
-  name: "Arc Open",
+  name: "Arc Hackathon",
   // hero kicker line
-  kicker: "An Arc hackathon · Base × Solana × Bitcoin",
-  positioning: "One weekend. The best builders on Base, Solana, and Bitcoin, in one room. Hosted by The Arc. Forged, not gathered.",
+  kicker: "Base × Solana × Bitcoin · hosted by Arc",
+  positioning: "One weekend. The best builders on Base, Solana, and Bitcoin, in one room. Hosted by Arc. Forged, not gathered.",
   oneLiner: "One weekend. The best builders across Base, Solana, and Bitcoin. Real problems, real capital, one room.",
 
   // host of this edition
-  host: { name: "The Arc", slug: "arc", url: "https://thearccity.com" },
+  host: { name: "Arc", slug: "arc", url: "https://thearccity.com" },
 
   /* ---- when + where ---- */
   // TODO_DATE: confirm the month. Reading "the 10th and 11th" as Fri-Sat 10-11 July 2026.
@@ -60,9 +60,9 @@ export const event = {
   },
   // TODO_COUNTDOWN + TODO_TZ: confirm the timezone (defaulting to UTC+8).
   countdownTargetISO: "2026-07-10T18:00:00+08:00",
-  // TODO_LOCATION: confirm The Arc's venue + city.
+  // TODO_LOCATION: confirm Arc's venue + city.
   location: {
-    venue: "The Arc",
+    venue: "Arc",
     city: "Venue TBA",
   },
 
@@ -76,7 +76,7 @@ export const event = {
   /* ---- who's in the room: four audiences, one switchboard ----
    * TODO_SEATS: confirm capacity numbers (they double as scarcity). */
   connectivity:
-    "Arc Open is run like a switchboard. Builders, investors, incubators, and the people who tell the story are in one room on purpose, matched by hand, not left to a name-tag scramble.",
+    "Arc Hackathon is run like a switchboard. Builders, investors, incubators, and the people who tell the story are in one room on purpose, matched by hand, not left to a name-tag scramble.",
   audiences: [
     { key: "builders", label: "Engineers", value: "Ship something real in one weekend. Mentors on the floor, capital in the room, and a stage that actually gets watched.", slug: "apply-builder", cta: "Apply as a builder", seats: "50 team seats" },
     { key: "investors", label: "Investors", value: "Meet the teams while the code is still warm. First look and first check, before the round is a round.", slug: "apply-investor", cta: "Apply as an investor", seats: "20 investor seats" },
@@ -99,7 +99,7 @@ export const event = {
   /* ---- the pitch ---- */
   pitch: [
     "Most hackathons hand you a room, a deadline, and a sponsor table, then disappear.",
-    "Arc Open is directed. Base, Solana, and Bitcoin in one room, a curated problem set, a produced run of show, and no dead air, every hour pulls you toward the next.",
+    "Arc Hackathon is directed. Base, Solana, and Bitcoin in one room, a curated problem set, a produced run of show, and no dead air, every hour pulls you toward the next.",
     "Builders, not spectators. You leave with a thing that works and the people who can fund it.",
   ],
 
@@ -119,7 +119,7 @@ export const event = {
       { amount: "$30,000", title: "Best Base app", sponsor: "Base", sponsorSlug: "base" },
       { amount: "$30,000", title: "Best Solana app", sponsor: "Solana", sponsorSlug: "solana" },
       { amount: "$30,000", title: "Best Bitcoin / Lightning build", sponsor: "Fulgur Ventures", sponsorSlug: "bitcoin" },
-      { amount: "$10,000", title: "Best cross-ecosystem build", sponsor: "The Arc", sponsorSlug: "arc" },
+      { amount: "$10,000", title: "Best cross-ecosystem build", sponsor: "Arc", sponsorSlug: "arc" },
     ] satisfies Bounty[],
   },
 
@@ -148,7 +148,7 @@ export const event = {
 
   /* ---- partners + sponsors (Arc hosts; ecosystems shown equal; slots fill in) ---- */
   partners: [
-    { name: "The Arc", slug: "arc", tier: "Host" },
+    { name: "Arc", slug: "arc", tier: "Host" },
     { name: "Base", slug: "base", tier: "Ecosystem" },
     { name: "Solana", slug: "solana", tier: "Ecosystem" },
     { name: "Bitcoin / Fulgur", slug: "bitcoin", tier: "Ecosystem" },
@@ -162,7 +162,7 @@ export const event = {
   rsvp: {
     mode: "email" as "email" | "embed" | "redirect",
     // TODO_RSVP_DESTINATION: the owned short link /rsvp (and /door) 302s here.
-    destination: "https://lu.ma/TODO_ARC_OPEN",
+    destination: "https://lu.ma/TODO_ARC_HACKATHON",
     embedUrl: "https://lu.ma/embed/event/TODO/simple",
   },
 
@@ -181,7 +181,7 @@ export const event = {
   seo: {
     url: "https://archackathon.vercel.app",
     description:
-      "Arc Open, a directed multi-ecosystem hackathon hosted by The Arc. The best builders on Base, Solana, and Bitcoin, one weekend, one room. Documented and livestreamed.",
+      "Arc Hackathon, a directed multi-ecosystem hackathon hosted by Arc. The best builders on Base, Solana, and Bitcoin, one weekend, one room. Documented and livestreamed.",
   },
 };
 

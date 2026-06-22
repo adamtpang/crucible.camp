@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
     const resend = new Resend(key);
     const audienceId = process.env.RESEND_AUDIENCE_ID;
     const notify = process.env.RSVP_NOTIFY_EMAIL;
-    const from = process.env.RESEND_FROM || "Arc Open <onboarding@resend.dev>";
+    const from = process.env.RESEND_FROM || "Arc Hackathon <onboarding@resend.dev>";
 
     if (audienceId) {
       await resend.contacts.create({
@@ -50,8 +50,8 @@ export async function POST(req: NextRequest) {
       await resend.emails.send({
         from,
         to: notify,
-        subject: `Arc Open, new ${role || "RSVP"}: ${email}`,
-        text: `${email} (${role || "n/a"}) joined the Arc Open interest list.`,
+        subject: `Arc Hackathon, new ${role || "RSVP"}: ${email}`,
+        text: `${email} (${role || "n/a"}) joined the Arc Hackathon interest list.`,
       });
     }
 

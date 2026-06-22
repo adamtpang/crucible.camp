@@ -90,8 +90,8 @@ body {
   font-family: var(--font-display);
   font-weight: 900;
   text-transform: uppercase;
-  font-size: clamp(2.6rem, 12vw, 10rem);
-  line-height: 0.92;
+  font-size: clamp(2rem, 11vw, 8.5rem);
+  line-height: 0.94;
   letter-spacing: -0.015em;
   width: max-content;
   max-width: 100%;

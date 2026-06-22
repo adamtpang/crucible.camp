@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 export function GET(req: NextRequest) {
   const source = req.nextUrl.searchParams.get("source") ?? "rsvp";
   const dest = new URL(event.rsvp.destination);
-  dest.searchParams.set("utm_source", "arc-open");
+  dest.searchParams.set("utm_source", "arc-hackathon");
   dest.searchParams.set("utm_medium", "short-link");
   dest.searchParams.set("utm_campaign", source);
   return NextResponse.redirect(dest, 302);

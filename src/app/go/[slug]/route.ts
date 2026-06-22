@@ -21,7 +21,7 @@ export async function GET(req: NextRequest, ctx: { params: Promise<{ slug: strin
   }
 
   const dest = new URL(entry.destination);
-  dest.searchParams.set("utm_source", "arc-open");
+  dest.searchParams.set("utm_source", "arc-hackathon");
   dest.searchParams.set("utm_medium", "go");
   dest.searchParams.set("utm_campaign", slug);
   return NextResponse.redirect(dest, 302);

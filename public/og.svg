@@ -1,42 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Arc Open, a Base, Solana and Bitcoin hackathon by The Arc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Arc Hackathon, a Base, Solana and Bitcoin builder weekend hosted by Arc">
   <defs>
-    <linearGradient id="heat" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#fff4e6"/>
-      <stop offset="0.16" stop-color="#ffd27a"/>
-      <stop offset="0.42" stop-color="#ff9d2f"/>
-      <stop offset="0.66" stop-color="#ff5a1f"/>
-      <stop offset="0.86" stop-color="#d92b09"/>
-      <stop offset="1" stop-color="#8c1a06"/>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C8102E"/>
+      <stop offset="0.55" stop-color="#A10D25"/>
+      <stop offset="1" stop-color="#B8892A"/>
     </linearGradient>
-    <linearGradient id="heatbar" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#8c1a06"/>
-      <stop offset="0.25" stop-color="#d92b09"/>
-      <stop offset="0.5" stop-color="#ff5a1f"/>
-      <stop offset="0.72" stop-color="#ff9d2f"/>
-      <stop offset="0.88" stop-color="#ffd27a"/>
-      <stop offset="1" stop-color="#fff4e6"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="0.32" cy="0.95" r="0.8">
-      <stop offset="0" stop-color="#ff5a1f" stop-opacity="0.34"/>
-      <stop offset="0.5" stop-color="#d92b09" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#0a0c11" stop-opacity="0"/>
-    </radialGradient>
   </defs>
 
-  <rect width="1200" height="630" fill="#0a0c11"/>
-  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="#F4EFE6"/>
 
-  <g transform="translate(80 96)">
-    <path d="M16 0 L40 42 H-8 Z" fill="url(#heat)"/>
-    <text x="64" y="30" font-family="'IBM Plex Mono', monospace" font-size="21" letter-spacing="4" fill="#9aa3b4">AN ARC HACKATHON &#183; BASE &#215; SOLANA &#215; BITCOIN</text>
-  </g>
+  <text x="80" y="118" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="22" letter-spacing="5" fill="rgba(26,22,19,0.6)">BASE &#215; SOLANA &#215; BITCOIN &#183; HOSTED BY ARC</text>
 
-  <text x="76" y="332" font-family="'Archivo Expanded','Archivo Black','Arial Black',sans-serif" font-weight="900" font-size="170" letter-spacing="-2" fill="url(#heat)">ARC OPEN</text>
+  <text x="78" y="320" font-family="Georgia,'Times New Roman',serif" font-weight="800" font-size="124" letter-spacing="-2">
+    <tspan fill="#C8102E">ARC</tspan><tspan fill="#1A1613"> HACKATHON</tspan>
+  </text>
 
-  <text x="80" y="416" font-family="'Archivo','Helvetica Neue',sans-serif" font-weight="500" font-size="36" fill="#e9ecf2">The best builders on Base, Solana, and Bitcoin.</text>
-  <text x="80" y="464" font-family="'Archivo','Helvetica Neue',sans-serif" font-weight="500" font-size="36" fill="#9aa3b4">One weekend, one room. Hosted by The Arc.</text>
+  <text x="80" y="404" font-family="Georgia,'Times New Roman',serif" font-size="38" fill="#1A1613">The best builders on Base, Solana, and Bitcoin.</text>
+  <text x="80" y="452" font-family="Georgia,'Times New Roman',serif" font-size="38" fill="rgba(26,22,19,0.62)">One weekend, one room. Hosted by Arc.</text>
 
-  <rect x="80" y="540" width="1040" height="6" rx="3" fill="url(#heatbar)"/>
-  <text x="80" y="592" font-family="'IBM Plex Mono', monospace" font-size="21" letter-spacing="2" fill="#6a7384">THE ARC &#183; THEARCCITY.COM</text>
-  <text x="1120" y="592" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="21" letter-spacing="2" fill="#6a7384">JULY 10-11, 2026</text>
+  <rect x="80" y="540" width="1040" height="4" fill="url(#rule)"/>
+  <text x="80" y="590" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="21" letter-spacing="2" fill="rgba(26,22,19,0.55)">ARC &#183; THEARCCITY.COM</text>
+  <text x="1120" y="590" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="21" letter-spacing="2" fill="rgba(26,22,19,0.55)">JULY 10-11, 2026</text>
 </svg>
