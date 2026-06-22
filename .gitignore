@@ -1,15 +1,31 @@
-# dependencies (none required — this is a static site)
-node_modules/
+# dependencies
+/node_modules
+.pnp
+.pnp.*
+
+# next.js
+/.next/
+/out/
+/build
+next-env.d.ts
+
+# env (keep .env.example tracked)
+.env
+.env*.local
 
 # vercel
 .vercel/
 
-# local preview tooling (see README for `npx serve`)
+# local preview tooling (see README for `npm run dev`)
 .claude/
 
-# os / editor cruft
+# generated QR assets (regenerate with `npm run qr`)
+/public/qr/
+
+# os / editor
 .DS_Store
 Thumbs.db
 *.log
+npm-debug.log*
 .idea/
 .vscode/

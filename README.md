@@ -1,91 +1,105 @@
 # CRUCIBLE — crucible.camp
 
-A one-page teaser / interest-capture site for **Crucible**, a Bitcoin hackathon at Network School.
+Landing page for **Crucible**, a directed 36-hour Bitcoin hackathon at Network School,
+co-produced by **Viber · The Arc · Fulgur Ventures**.
 
-Static HTML/CSS/JS. No build step, no framework, no backend — optimized for instant Vercel deploys.
+Next.js 15 (App Router) · TypeScript · Tailwind v4 · shadcn-style components · Resend.
+Built as a **config-driven template**: the next edition is a `event.config.ts` swap, not a rebuild.
 
 ```
-index.html      # all content + every TODO_ lives here
-styles.css      # "cold steel, forged hot" design system
-main.js         # form handling (Formspree-ready) + scroll reveal
-favicon.svg     # crucible glyph
-og.svg          # social share card (1200×630)
-vercel.json     # clean URLs + security headers
-robots.txt / sitemap.xml
+src/
+  app/
+    page.tsx              # composes the run-of-show curve
+    layout.tsx            # fonts + metadata
+    globals.css           # "cold steel, forged hot" design system
+    rsvp/route.ts         # 302 → one config destination (the owned short link)
+    door/route.ts         # 302 → same, tagged as on-site walk-in
+    go/[slug]/route.ts    # attributable outbound redirects (config slug map)
+    api/subscribe/route.ts# Resend interest capture (demo-safe without keys)
+    icon.svg robots.ts sitemap.ts
+  components/
+    sections/             # Header, Hero, Pitch, Tracks, RunOfShow, Judges, Rsvp, Partners, Footer
+    Countdown.tsx CtaLink.tsx RsvpForm.tsx Reveal.tsx
+event.config.ts           # ← SINGLE SOURCE OF TRUTH (everything event-specific)
+scripts/generate-qr.mjs   # QR codes for /door + /rsvp
 ```
 
-**Design concept — "Cold steel, forged hot."** A disciplined cold-charcoal base
-against a single accent system: the real blackbody color ramp metal glows through
-as it heats (dull ember → orange → amber → white-hot). The signature element is the
-`CRUCIBLE` wordmark *forging* on load. Type: Archivo Expanded (display) · IBM Plex
-Mono (instrument/labels) · Archivo (body).
-
----
-
-## ✅ Swap these in tonight (each is one line — search for `TODO_`)
-
-All edits are in **`index.html`** unless noted. Total time: well under 10 minutes.
-
-| Marker | Where | What to do |
-|---|---|---|
-| `TODO_FORM_ENDPOINT` | `index.html` `<form action>` (and the form works automatically once changed) | Create a form at [formspree.io](https://formspree.io), copy its ID, set `action="https://formspree.io/f/XXXXXXXX"`. Until then the form runs in safe "demo mode". |
-| `TODO_DATE` | hero `<dd>` | Real dates, e.g. `14–15 SEP 2026`. |
-| `TODO_THESIS` | hero `.thesis` | The one-line thesis (currently the brief's placeholder — tighten if you want). |
-| `TODO_PARTNERS` | section 04 | Replace the backing sentence + the 4 `PARTNER 0X` placeholders with real names / the capital figure. |
-| `TODO_OG` *(optional)* | `<head>` `og:image` | For maximum link-preview compatibility, export `og.svg` → `og.png` (1200×630) and point the tag at `/og.png`. SVG works on most platforms as-is. |
-| `TODO_SOCIAL` *(optional)* | footer | Add X / Telegram links. |
-
-> Tip: `grep -rn "TODO_" .` lists every placeholder with its line number.
-
----
-
-## 🚀 Deploy to Vercel + connect crucible.camp
-
-Vercel CLI is already installed. From this folder:
-
+## Quickstart
 ```bash
-# 1. one-time auth
-vercel login
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # production build (type-checked)
+```
 
-# 2. first deploy — links/creates the project (accept the defaults; framework = Other)
-vercel
+## Everything lives in `event.config.ts`
+Name, dates, countdown target, city, the three co-hosts, tracks, bounties, judges,
+mentors, partners, the CTA/`links` slug→destination map, and the RSVP destination/mode.
+Components hardcode nothing. **`grep -rn "TODO_" event.config.ts`** lists every value to fill.
 
-# 3. ship to production
-vercel --prod
+## CTAs & attribution (the business lever)
+Every outbound click is routed through an internal redirect so it's trackable, and every
+destination is one config value:
 
-# 4. attach your domain (do apex + www)
+| Route | Goes to | Notes |
+|---|---|---|
+| `/rsvp` | `event.rsvp.destination` | The owned short link you front everywhere. Swap the destination, the printed link never changes. |
+| `/door` | `event.rsvp.destination` | Same, tagged `utm_medium=door-qr&source=door` so walk-ins are distinguishable. |
+| `/go/[slug]` | `links[slug].destination` | Apply-builder, apply-investor, sponsor, mentor, partner, livestream, the 3 co-hosts, and any sponsor logo. Unknown slug → home. |
+
+All redirects append `utm_source=crucible.camp` + a per-route `utm_campaign`. `mailto:` passes through untouched.
+
+**CTA set:** Apply as a builder + Apply as an investor (co-primary) · RSVP (catch-all) ·
+Sponsor a bounty · Become a judge/mentor · Partner with us · Watch the livestream. Edit labels/destinations in `links`.
+
+## RSVP backend (swap without touching markup)
+`event.rsvp.mode`:
+- `"email"` → on-site capture via Resend (`/api/subscribe`). **Demo-safe**: with no
+  `RESEND_API_KEY`, it validates and returns success but sends nothing.
+- `"embed"` → drops a Luma/Tally iframe (`event.rsvp.embedUrl`).
+- `"redirect"` → a button that bounces through `/rsvp` to the destination.
+
+Copy `.env.example` → `.env.local` and add `RESEND_API_KEY` (+ optional `RESEND_AUDIENCE_ID`,
+`RSVP_NOTIFY_EMAIL`, `RESEND_FROM`) to send for real.
+
+## QR codes
+```bash
+npm run qr     # writes public/qr/{door,rsvp}.{png,svg}  (uses SITE_URL or https://crucible.camp)
+```
+Print `door.png` at the entrance; share `rsvp.png` anywhere.
+
+## Deploy to Vercel + crucible.camp
+```bash
+vercel            # first deploy (links/creates project; framework auto-detected = Next.js)
+vercel --prod     # production
 vercel domains add crucible.camp
 vercel domains add www.crucible.camp
 ```
+Add your env vars in **Vercel → Project → Settings → Environment Variables** (same keys as `.env.example`).
 
-### DNS records to set at your registrar
+**DNS** (at your registrar, if DNS isn't already on Vercel):
 
-If your domain's DNS is **NOT** on Vercel, add these at your current registrar/DNS host:
+| Type | Name | Value |
+|---|---|---|
+| `A` | `@` | `76.76.21.21` |
+| `CNAME` | `www` | `cname.vercel-dns.com` |
 
-| Type | Name / Host | Value | TTL |
-|---|---|---|---|
-| `A` | `@` (apex `crucible.camp`) | `76.76.21.21` | Auto / 3600 |
-| `CNAME` | `www` | `cname.vercel-dns.com` | Auto / 3600 |
-
-Then redirect `www → apex` (or vice-versa) in **Vercel → Project → Settings → Domains**.
-
-**Source of truth:** run `vercel domains inspect crucible.camp` — it prints the *exact*
-records Vercel wants for your account (the apex IP and the `www` target, e.g.
-`cname.vercel-dns-0.com`, occasionally differ). If they differ from the table above, use what `inspect` shows.
-
-*Alternative (zero DNS editing):* point your registrar's **nameservers** at Vercel
-(`ns1.vercel-dns.com`, `ns2.vercel-dns.com`) and let Vercel manage DNS. `vercel domains inspect` will confirm.
-
-HTTPS certs are issued automatically once DNS resolves (usually minutes).
-
-### Or deploy from Git
-Push this repo to GitHub and "Import Project" at [vercel.com/new](https://vercel.com/new) —
-Framework Preset **Other**, no build command, output dir = repo root. Every push auto-deploys.
+`vercel domains inspect crucible.camp` prints the exact records for your account (use those if they differ).
 
 ---
 
-## Local preview
-No tooling needed — open `index.html`, or:
-```bash
-npx serve .      # http://localhost:3000
-```
+## TODO before launch — swap in `event.config.ts`
+- `TODO_APPLY_BUILDER` / `TODO_APPLY_INVESTOR` — real application form URLs (Tally/Typeform/Luma)
+- `TODO_RSVP_DESTINATION` — where `/rsvp` and `/door` point (Luma event, etc.)
+- `TODO_DATE` / `TODO_COUNTDOWN` — real dates + ISO countdown target (with TZ offset)
+- `TODO_LOCATION` — confirm venue + city
+- `TODO_BOUNTIES` — real amounts + sponsors (`sponsorSlug` links the logo via `/go/<slug>`)
+- `TODO_JUDGES` / `TODO_MENTORS` — names as they confirm
+- `TODO_SPONSORS` — sponsor names + add their slug to `links`
+- `TODO_COHOST_URLS` — confirm viber.global / thearccity.com / fulgur.ventures URLs
+- `TODO_CONTACT` / `TODO_LIVESTREAM` / social — footer links
+- Resend env vars (above) to take the RSVP form live
+
+> Note: the previous static prototype (`index.html`, `styles.css`, `main.js`, and root-level
+> `favicon.svg`/`og.svg`/`robots.txt`/`sitemap.xml`) is superseded by this app and inert, but a
+> safety guard blocked automated deletion. Remove them when convenient:
+> `git rm index.html styles.css main.js favicon.svg og.svg robots.txt sitemap.xml`
