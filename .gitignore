@@ -16,6 +16,9 @@ next-env.d.ts
 # vercel
 .vercel/
 
+# private planning docs (proposals, budgets, research) - NEVER pushed to the public repo
+/_planning/
+
 # local preview tooling (see README for `npm run dev`)
 .claude/
 
