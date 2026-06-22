@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, IBM_Plex_Mono } from "next/font/google";
+import { Archivo, Fraunces, IBM_Plex_Mono } from "next/font/google";
 import { event } from "@config";
 import { Reveal } from "@/components/Reveal";
 import "./globals.css";
@@ -11,6 +11,12 @@ const archivo = Archivo({
   axes: ["wdth"],
   display: "swap",
   variable: "--font-archivo",
+});
+// Editorial serif display (approximation of Arc's --font-nav until exact font supplied)
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-fraunces",
 });
 const mono = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -40,9 +46,11 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = { themeColor: "#f4efe6" };
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${archivo.variable} ${mono.variable}`}>
+    <html lang="en" className={`${archivo.variable} ${fraunces.variable} ${mono.variable}`}>
       <body>
         <a href="#rsvp" className="skip-link">
           Skip to apply

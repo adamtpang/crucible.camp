@@ -13,7 +13,7 @@ export function Rsvp() {
       aria-labelledby="rsvp-h"
       className="reveal border-t border-line px-6 py-24 md:py-32"
       style={{
-        background: "radial-gradient(80% 130% at 50% 130%, rgba(255,90,31,0.14), transparent 62%)",
+        background: "radial-gradient(80% 130% at 50% 130%, rgba(200,16,46,0.07), transparent 62%)",
       }}
     >
       <div className="mx-auto max-w-[640px] text-center">

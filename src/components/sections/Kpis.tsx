@@ -6,7 +6,7 @@ export function Kpis() {
     <section
       aria-labelledby="kpis-h"
       className="reveal border-y border-line px-6 py-16 md:py-20"
-      style={{ background: "radial-gradient(120% 100% at 50% 0%, rgba(255,90,31,0.06), transparent 60%)" }}
+      style={{ background: "radial-gradient(120% 100% at 50% 0%, rgba(200,16,46,0.05), transparent 60%)" }}
     >
       <div className="mx-auto max-w-[1180px]">
         <div className="mb-9 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
@@ -15,7 +15,7 @@ export function Kpis() {
           </h2>
           <p className="mono text-xs uppercase tracking-[0.16em] text-ink-faint">{event.kpis.caption}</p>
         </div>
-        <dl className="grid grid-cols-2 gap-px overflow-hidden rounded border border-line bg-line md:grid-cols-5">
+        <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-noneborder border-line bg-line md:grid-cols-5">
           {event.kpis.items.map((k, i) => (
             <div
               key={i}

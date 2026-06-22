@@ -22,7 +22,7 @@ export function Tracks() {
           </h2>
 
           {/* tracks */}
-          <ul className="mt-8 grid gap-px overflow-hidden rounded border border-line bg-line sm:grid-cols-3">
+          <ul className="mt-8 grid gap-px overflow-hidden rounded-noneborder border-line bg-line sm:grid-cols-3">
             {tracks.map((t) => (
               <li key={t.name} className="flex flex-col gap-2 bg-panel p-6">
                 <span className="mono text-[0.7rem] uppercase tracking-[0.16em] text-forge">{t.tag}</span>
@@ -33,7 +33,7 @@ export function Tracks() {
           </ul>
 
           {/* bounties, a moment, not fine print */}
-          <div className="mt-10 rounded border border-line bg-bg-2 p-6 md:p-8">
+          <div className="mt-10 rounded-noneborder border-line bg-bg-2 p-6 md:p-8">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
                 <p className="kicker mb-2">Bounty pool</p>

@@ -5,10 +5,10 @@ import type { Person } from "@config";
 function PersonCard({ p }: { p: Person }) {
   const tbd = p.confirmed === false;
   return (
-    <li className="flex items-center gap-4 rounded border border-line bg-panel p-4">
+    <li className="flex items-center gap-4 rounded-noneborder border-line bg-panel p-4">
       <span
         aria-hidden
-        className="flex h-12 w-12 shrink-0 items-center justify-center rounded bg-bg-2 text-lg"
+        className="flex h-12 w-12 shrink-0 items-center justify-center rounded-nonebg-bg-2 text-lg"
       >
         <span className={tbd ? "text-ink-faint/40" : "heat-text"}>▲</span>
       </span>

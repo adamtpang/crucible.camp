@@ -69,7 +69,7 @@ export function RsvpForm() {
           autoComplete="email"
           placeholder="you@domain.com"
           required
-          className="mono min-w-0 flex-1 rounded-[2px] border border-line bg-bg-2 px-4 py-3 text-sm text-ink placeholder:text-ink-faint focus-visible:border-forge focus-visible:outline-none"
+          className="mono min-w-0 flex-1 rounded-none border border-line bg-bg-2 px-4 py-3 text-sm text-ink placeholder:text-ink-faint focus-visible:border-forge focus-visible:outline-none"
         />
         <Button type="submit" kind="primary" disabled={busy}>
           {busy ? "Sending…" : "Join the list"}

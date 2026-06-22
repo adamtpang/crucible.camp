@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 /* shadcn-style variants, retuned to the forge palette. Shared by <Button> and <CtaLink>. */
 export const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[2px] font-mono font-medium tracking-wide select-none transition-[transform,box-shadow,background-color,border-color,color] duration-200 ease-[cubic-bezier(0.2,0.65,0.2,1)] disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-none font-mono font-medium tracking-wide select-none transition-[transform,box-shadow,background-color,border-color,color] duration-200 ease-[cubic-bezier(0.2,0.65,0.2,1)] disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       kind: {

@@ -22,7 +22,7 @@ export function Partners() {
           </h2>
 
           {/* three equal headline co-hosts */}
-          <ul className="mt-8 grid gap-px overflow-hidden rounded border border-line bg-line sm:grid-cols-3">
+          <ul className="mt-8 grid gap-px overflow-hidden rounded-noneborder border-line bg-line sm:grid-cols-3">
             {event.coHosts.map((c) => (
               <li key={c.slug} className="bg-panel">
                 <a href={go(c.slug)} className="flex h-full flex-col gap-2 p-6 transition-colors hover:bg-bg-2">
@@ -34,7 +34,7 @@ export function Partners() {
           </ul>
 
           {/* sponsor slots */}
-          <ul className="mt-3 grid grid-cols-2 gap-px overflow-hidden rounded border border-line bg-line sm:grid-cols-3">
+          <ul className="mt-3 grid grid-cols-2 gap-px overflow-hidden rounded-noneborder border-line bg-line sm:grid-cols-3">
             {sponsors.map((s, i) => (
               <li
                 key={i}

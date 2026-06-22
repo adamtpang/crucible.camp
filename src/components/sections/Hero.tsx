@@ -17,7 +17,7 @@ export function Hero() {
         className="pointer-events-none absolute -z-10 left-2 top-24 h-[40vw] max-h-[440px] w-[72vw] max-w-[640px] rounded-full blur-[60px]"
         style={{
           background:
-            "radial-gradient(circle at 30% 50%, rgba(255,90,31,0.26), rgba(217,43,9,0.10) 40%, transparent 70%)",
+            "radial-gradient(circle at 30% 50%, rgba(200,16,46,0.07), transparent 72%)",
         }}
       />
 

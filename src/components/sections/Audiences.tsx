@@ -22,7 +22,7 @@ export function Audiences() {
           </h2>
           <p className="mt-4 max-w-[58ch] text-ink-dim">{event.connectivity}</p>
 
-          <ul className="mt-8 grid gap-px overflow-hidden rounded border border-line bg-line sm:grid-cols-2">
+          <ul className="mt-8 grid gap-px overflow-hidden rounded-noneborder border-line bg-line sm:grid-cols-2">
             {event.audiences.map((a) => (
               <li key={a.key} className="flex flex-col gap-3 bg-panel p-6">
                 <div className="flex items-baseline justify-between gap-3">
