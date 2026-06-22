@@ -19,7 +19,7 @@ export function Rsvp() {
       <div className="mx-auto max-w-[640px] text-center">
         <p className="kicker mb-4">Applications are open</p>
         <h2 id="rsvp-h" className="display text-4xl leading-[0.98] sm:text-5xl md:text-6xl">
-          Step into the crucible.
+          Step into the arena.
         </h2>
         <p className="mx-auto mt-4 max-w-[46ch] text-ink-dim">
           50 teams. Pick your lane. Builders ship; investors get the room before anyone else does.

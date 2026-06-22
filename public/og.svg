@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="CRUCIBLE, a Bitcoin hackathon at Network School">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Arc Open, a Base, Solana and Bitcoin hackathon by The Arc">
   <defs>
     <linearGradient id="heat" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#fff4e6"/>
@@ -28,15 +28,15 @@
 
   <g transform="translate(80 96)">
     <path d="M16 0 L40 42 H-8 Z" fill="url(#heat)"/>
-    <text x="64" y="30" font-family="'IBM Plex Mono', monospace" font-size="21" letter-spacing="5" fill="#9aa3b4">A DIRECTED BITCOIN HACKATHON</text>
+    <text x="64" y="30" font-family="'IBM Plex Mono', monospace" font-size="21" letter-spacing="4" fill="#9aa3b4">AN ARC HACKATHON &#183; BASE &#215; SOLANA &#215; BITCOIN</text>
   </g>
 
-  <text x="76" y="340" font-family="'Archivo Expanded','Archivo Black','Arial Black',sans-serif" font-weight="900" font-size="186" letter-spacing="-2" fill="url(#heat)">CRUCIBLE</text>
+  <text x="76" y="332" font-family="'Archivo Expanded','Archivo Black','Arial Black',sans-serif" font-weight="900" font-size="170" letter-spacing="-2" fill="url(#heat)">ARC OPEN</text>
 
-  <text x="80" y="420" font-family="'Archivo','Helvetica Neue',sans-serif" font-weight="500" font-size="36" fill="#e9ecf2">36 hours. The best builders in Bitcoin.</text>
-  <text x="80" y="468" font-family="'Archivo','Helvetica Neue',sans-serif" font-weight="500" font-size="36" fill="#9aa3b4">Real problems, real capital, one room.</text>
+  <text x="80" y="416" font-family="'Archivo','Helvetica Neue',sans-serif" font-weight="500" font-size="36" fill="#e9ecf2">The best builders on Base, Solana, and Bitcoin.</text>
+  <text x="80" y="464" font-family="'Archivo','Helvetica Neue',sans-serif" font-weight="500" font-size="36" fill="#9aa3b4">One weekend, one room. Hosted by The Arc.</text>
 
   <rect x="80" y="540" width="1040" height="6" rx="3" fill="url(#heatbar)"/>
-  <text x="80" y="592" font-family="'IBM Plex Mono', monospace" font-size="21" letter-spacing="2" fill="#6a7384">NETWORK SCHOOL &#183; CRUCIBLE.CAMP</text>
-  <text x="1120" y="592" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="21" letter-spacing="2" fill="#6a7384">VIBER &#183; THE ARC &#183; FULGUR</text>
+  <text x="80" y="592" font-family="'IBM Plex Mono', monospace" font-size="21" letter-spacing="2" fill="#6a7384">THE ARC &#183; THEARCCITY.COM</text>
+  <text x="1120" y="592" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="21" letter-spacing="2" fill="#6a7384">JULY 10-11, 2026</text>
 </svg>

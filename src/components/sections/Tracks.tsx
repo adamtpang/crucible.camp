@@ -71,8 +71,8 @@ export function Tracks() {
                 {links.sponsor.label}
               </CtaLink>
               <span className="mono text-xs text-ink-faint">
-                Capital lane led by{" "}
-                <a href={go("fulgur")} className="text-ink-dim hover:text-forge">
+                Bitcoin capital via{" "}
+                <a href={go("bitcoin")} className="text-ink-dim hover:text-forge">
                   Fulgur Ventures
                 </a>
                 .

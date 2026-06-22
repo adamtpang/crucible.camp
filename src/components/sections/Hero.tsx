@@ -21,7 +21,7 @@ export function Hero() {
         }}
       />
 
-      <p className="kicker mb-6">A directed Bitcoin hackathon</p>
+      <p className="kicker mb-6">{event.kicker}</p>
 
       <h1 id="wordmark" className="wordmark">
         {event.name}
@@ -70,7 +70,7 @@ export function Hero() {
 
       {/* co-host bar: three equal headline partners */}
       <div className="mt-12 border-t border-line pt-6">
-        <p className="kicker mb-3">Co-produced by</p>
+        <p className="kicker mb-3">The ecosystems</p>
         <div className="flex flex-wrap items-center gap-x-7 gap-y-3">
           {event.coHosts.map((c) => (
             <Link

@@ -2,7 +2,7 @@ import { event, go, links } from "@config";
 import { CtaLink } from "@/components/CtaLink";
 
 export function Partners() {
-  const sponsors = event.partners.filter((p) => p.tier !== "Co-host");
+  const sponsors = event.partners.filter((p) => p.tier === "Sponsor");
 
   return (
     <section
@@ -18,7 +18,7 @@ export function Partners() {
 
         <div>
           <h2 id="partners-h" className="display max-w-[18ch] text-3xl leading-[1.05] sm:text-4xl md:text-[2.9rem]">
-            Co-produced by three. Backed by more.
+            Hosted by The Arc. Three ecosystems, backed by more.
           </h2>
 
           {/* three equal headline co-hosts */}

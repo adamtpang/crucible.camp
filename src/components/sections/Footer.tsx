@@ -23,8 +23,8 @@ export function Footer() {
           <span aria-hidden className="text-line">·</span>
           <span>{event.location.venue}</span>
           <span aria-hidden className="text-line">·</span>
-          <a href={event.seo.url} className="transition-colors hover:text-forge">
-            crucible.camp
+          <a href={event.host.url} className="transition-colors hover:text-forge">
+            thearccity.com
           </a>
 
           <span className="flex items-center gap-x-5 sm:ml-auto">
@@ -42,7 +42,7 @@ export function Footer() {
             </a>
           </span>
         </div>
-        <p className="mono mt-4 text-[0.7rem] text-ink-faint/70">Forged at Network School.</p>
+        <p className="mono mt-4 text-[0.7rem] text-ink-faint/70">Hosted by The Arc.</p>
       </div>
     </footer>
   );

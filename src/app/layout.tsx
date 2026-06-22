@@ -19,7 +19,7 @@ const mono = IBM_Plex_Mono({
   variable: "--font-mono-ibm",
 });
 
-const title = `${event.name}, A Bitcoin hackathon at ${event.location.venue}`;
+const title = `${event.name}, a Base, Solana and Bitcoin hackathon by ${event.host.name}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(event.seo.url),

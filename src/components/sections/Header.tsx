@@ -6,7 +6,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-line-soft bg-bg/70 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1180px] items-center justify-between px-6 py-3 md:px-10">
-        <Link href="#top" className="flex items-center gap-2" aria-label="Crucible, back to top">
+        <Link href="#top" className="flex items-center gap-2" aria-label="Arc Open, back to top">
           <span aria-hidden className="heat-text text-base leading-none">
             ▲
           </span>

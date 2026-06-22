@@ -43,7 +43,7 @@ export function Judges() {
             The people in the room with you.
           </h2>
           <p className="mt-4 max-w-[54ch] text-ink-dim">
-            Operators and investors who&apos;ve shipped real Bitcoin products, on the floor while you build,
+            Operators and investors who&apos;ve shipped real onchain products, on the floor while you build,
             on the panel when you demo. Roster locking now.
           </p>
 

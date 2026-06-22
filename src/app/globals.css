@@ -117,6 +117,7 @@ body {
   font-family: var(--font-display);
   font-stretch: 125%;
   font-weight: 900;
+  text-transform: uppercase;
   font-size: clamp(2.35rem, 11.2vw, 9.5rem);
   line-height: 0.88;
   letter-spacing: -0.012em;

@@ -1,10 +1,10 @@
 /* ============================================================================
- * event.config.ts, CRUCIBLE, SINGLE SOURCE OF TRUTH
+ * event.config.ts, ARC OPEN, SINGLE SOURCE OF TRUTH
  * ----------------------------------------------------------------------------
- * Everything event-specific lives here. Components read from this file and
- * hardcode nothing. To run the NEXT edition, swap values here, not markup.
- *
- * Search "TODO_" for every value to confirm before launch.
+ * Arc Open is an edition of the Crucible hackathon engine: a directed,
+ * multi-ecosystem builder weekend hosted by The Arc. The Bitcoin-only version
+ * was edition zero; this is the Base x Solana x Bitcoin edition. To run the
+ * next one, swap values here, not markup. Search "TODO_" before launch.
  * ========================================================================== */
 
 export type Beat = { time: string; label: string; detail: string };
@@ -18,73 +18,67 @@ export type Partner = { name: string; slug?: string; tier: string };
 export type CtaKind = "primary" | "secondary" | "ghost";
 export type LinkEntry = { label: string; destination: string; kind: CtaKind };
 
-/* ---- /go/[slug] destination map, every outbound click is attributable ----
- * UI buttons link to internal /go/<slug>; the redirect route appends UTM tags
- * and 302s to `destination`. Edit destinations here without touching markup. */
+/* ---- /go/[slug] destination map, every outbound click is attributable ---- */
 export const links: Record<string, LinkEntry> = {
-  // ---- primary apply paths (the segmented entry) ----
-  // TODO_APPLY_BUILDER: point at your builder application (Tally/Typeform/Luma/etc.)
+  // ---- primary apply paths ----
+  // TODO_APPLY_BUILDER / INVESTOR / INCUBATOR / MEDIA: point at real application forms
   "apply-builder": { label: "Apply as a builder", destination: "https://tally.so/r/TODO_BUILDER_FORM", kind: "primary" },
-  // TODO_APPLY_INVESTOR: point at your investor / capital-seat application
   "apply-investor": { label: "Apply as an investor", destination: "https://tally.so/r/TODO_INVESTOR_FORM", kind: "primary" },
-  // TODO_APPLY_INCUBATOR: incubator / accelerator scouting access
   "apply-incubator": { label: "Scout as an incubator", destination: "https://tally.so/r/TODO_INCUBATOR_FORM", kind: "secondary" },
-  // TODO_APPLY_MEDIA: creators / influencers / press access
   "apply-media": { label: "Apply for media access", destination: "https://tally.so/r/TODO_MEDIA_FORM", kind: "secondary" },
 
   // ---- secondary CTAs ----
-  // TODO_SPONSOR: Fulgur's capital/partnerships lane, bounty sponsorship inbound
-  sponsor: { label: "Sponsor a bounty", destination: "mailto:partners@crucible.camp?subject=Crucible%20bounty%20sponsorship", kind: "secondary" },
-  // TODO_MENTOR: judge/mentor application
+  sponsor: { label: "Sponsor a bounty", destination: "mailto:partners@thearccity.com?subject=Arc%20Open%20sponsorship", kind: "secondary" },
   mentor: { label: "Become a judge or mentor", destination: "https://tally.so/r/TODO_MENTOR_FORM", kind: "secondary" },
-  // TODO_PARTNER: org partnership / co-host inquiry
-  partner: { label: "Partner with us", destination: "mailto:hello@crucible.camp?subject=Crucible%20partnership", kind: "secondary" },
-  // TODO_LIVESTREAM: the documented/livestreamed feed (or a "notify me" link pre-event)
+  partner: { label: "Partner with us", destination: "mailto:hello@thearccity.com?subject=Arc%20Open%20partnership", kind: "secondary" },
   livestream: { label: "Watch the livestream", destination: "https://youtube.com/@TODO_CHANNEL", kind: "ghost" },
 
-  // ---- the three co-hosts (equal headline partners), tracked ----
-  // TODO_COHOST_URLS: confirm the canonical URLs
-  viber: { label: "Viber", destination: "https://viber.global", kind: "ghost" },
+  // ---- host + the three ecosystems, all tracked ----
   arc: { label: "The Arc", destination: "https://thearccity.com", kind: "ghost" },
-  fulgur: { label: "Fulgur Ventures", destination: "https://fulgur.ventures", kind: "ghost" },
+  base: { label: "Base", destination: "https://base.org", kind: "ghost" },
+  solana: { label: "Solana", destination: "https://solana.com", kind: "ghost" },
+  // Bitcoin lane is represented by Fulgur Ventures
+  bitcoin: { label: "Bitcoin", destination: "https://fulgur.ventures", kind: "ghost" },
 };
 
 export const event = {
   /* ---- identity ---- */
-  name: "CRUCIBLE",
-  // hero positioning line (one sentence). TODO_POSITIONING: tighten if you want.
-  positioning: "A directed 36-hour Bitcoin hackathon. Builders, founders, and capital in one room. Forged, not gathered.",
-  // used in meta + a one-liner under the pitch
-  oneLiner: "36 hours. The best builders in Bitcoin. Real problems, real capital, one room.",
+  name: "Arc Open",
+  // hero kicker line
+  kicker: "An Arc hackathon · Base × Solana × Bitcoin",
+  positioning: "One weekend. The best builders on Base, Solana, and Bitcoin, in one room. Hosted by The Arc. Forged, not gathered.",
+  oneLiner: "One weekend. The best builders across Base, Solana, and Bitcoin. Real problems, real capital, one room.",
+
+  // host of this edition
+  host: { name: "The Arc", slug: "arc", url: "https://thearccity.com" },
 
   /* ---- when + where ---- */
-  // TODO_DATE: real dates. Kept as a Fri–Sun placeholder ~1 month out.
+  // TODO_DATE: confirm the month. Reading "the 10th and 11th" as Fri-Sat 10-11 July 2026.
   date: {
-    display: "25–27 July 2026",
-    doors: "Doors 18:00 · Friday 25 July",
+    display: "July 10-11, 2026",
+    doors: "Doors 18:00 · Friday 10 July",
   },
-  // TODO_COUNTDOWN: ISO 8601 with timezone offset. Network School is UTC+8 (Malaysia).
-  countdownTargetISO: "2026-07-25T19:00:00+08:00",
-  // TODO_LOCATION: confirm venue + city.
+  // TODO_COUNTDOWN + TODO_TZ: confirm the timezone (defaulting to UTC+8).
+  countdownTargetISO: "2026-07-10T18:00:00+08:00",
+  // TODO_LOCATION: confirm The Arc's venue + city.
   location: {
-    venue: "Network School",
-    city: "Forest City, Malaysia",
+    venue: "The Arc",
+    city: "Venue TBA",
   },
 
-  /* ---- the three co-hosts: equal headline partners ---- */
+  /* ---- the three ecosystems in the arena (shown equal) ---- */
   coHosts: [
-    { name: "Viber", slug: "viber", lane: "Community & reach" },
-    { name: "The Arc", slug: "arc", lane: "Host city & venue" },
-    { name: "Fulgur Ventures", slug: "fulgur", lane: "Capital & partnerships" },
+    { name: "Base", slug: "base", lane: "Coinbase L2" },
+    { name: "Solana", slug: "solana", lane: "High-performance L1" },
+    { name: "Bitcoin", slug: "bitcoin", lane: "L1 + Lightning, with Fulgur" },
   ] satisfies CoHost[],
 
   /* ---- who's in the room: four audiences, one switchboard ----
-   * Every CTA routes through /go/<slug> so each audience is attributable.
-   * TODO_SEATS: confirm the real capacity numbers (they double as scarcity). */
+   * TODO_SEATS: confirm capacity numbers (they double as scarcity). */
   connectivity:
-    "Crucible is run like a switchboard. Builders, investors, incubators, and the people who tell the story are in one room on purpose, matched by hand, not left to a name-tag scramble.",
+    "Arc Open is run like a switchboard. Builders, investors, incubators, and the people who tell the story are in one room on purpose, matched by hand, not left to a name-tag scramble.",
   audiences: [
-    { key: "builders", label: "Engineers", value: "Ship something real in 36 hours. Mentors on the floor, capital in the room, and a stage that actually gets watched.", slug: "apply-builder", cta: "Apply as a builder", seats: "50 team seats" },
+    { key: "builders", label: "Engineers", value: "Ship something real in one weekend. Mentors on the floor, capital in the room, and a stage that actually gets watched.", slug: "apply-builder", cta: "Apply as a builder", seats: "50 team seats" },
     { key: "investors", label: "Investors", value: "Meet the teams while the code is still warm. First look and first check, before the round is a round.", slug: "apply-investor", cta: "Apply as an investor", seats: "20 investor seats" },
     { key: "incubators", label: "Incubators", value: "Source your next cohort under real pressure. Watch 50 teams build, then take the best ones home.", slug: "apply-incubator", cta: "Scout as an incubator", seats: "10 partner slots" },
     { key: "media", label: "Creators & media", value: "The story builds itself. Get the room, the footage, and the founders before anyone else has them.", slug: "apply-media", cta: "Apply for media access", seats: "12 media passes" },
@@ -94,7 +88,7 @@ export const event = {
   kpis: {
     caption: "A proposal for edition one. Targets, not promises.",
     items: [
-      { value: "36", label: "hours, no reset" },
+      { value: "3", label: "ecosystems: Base, Solana, Bitcoin" },
       { value: "50", label: "teams, hand-selected" },
       { value: "$100K+", label: "in bounties and pre-seed capital" },
       { value: "2-4", label: "investable teams, the real metric" },
@@ -102,46 +96,44 @@ export const event = {
     ] satisfies Kpi[],
   },
 
-  /* ---- the pitch: why this is directed, not a room with deadlines ---- */
+  /* ---- the pitch ---- */
   pitch: [
     "Most hackathons hand you a room, a deadline, and a sponsor table, then disappear.",
-    "Crucible is directed. The problem set is curated, the run of show is produced, and there is no dead air, every hour pulls you toward the next.",
+    "Arc Open is directed. Base, Solana, and Bitcoin in one room, a curated problem set, a produced run of show, and no dead air, every hour pulls you toward the next.",
     "Builders, not spectators. You leave with a thing that works and the people who can fund it.",
   ],
 
-  /* ---- tracks (Bitcoin-focused), add/remove freely ---- */
+  /* ---- tracks = the three ecosystems ---- */
   tracks: [
-    { name: "Lightning", tag: "L2 / payments", blurb: "Payments, streaming sats, and the rails that make Bitcoin spendable at scale." },
-    { name: "On-chain", tag: "Protocol / L1", blurb: "Covenants, scripts, mining, and the base layer's genuinely hard problems." },
-    { name: "Tooling", tag: "DevEx / infra", blurb: "Wallets, libraries, node infra, the developer experience the next 10,000 builders need." },
-    // TODO_TRACKS: add more (Privacy, Custody, AI×BTC…) as the program firms up.
+    { name: "Base", tag: "Coinbase L2", blurb: "Onchain consumer apps, payments, and the EVM L2 pushing hardest for mainstream adoption." },
+    { name: "Solana", tag: "High-performance L1", blurb: "High-throughput apps, DePIN, and anything that needs raw speed and low fees." },
+    { name: "Bitcoin", tag: "L1 + Lightning, with Fulgur", blurb: "Lightning, self-custody, and the hard problems on the original chain." },
   ] satisfies Track[],
 
-  /* ---- bounties: shown as a moment, not fine print. Fulgur leads the lane. ---- */
+  /* ---- bounties: each ecosystem brings its own capital ---- */
   bounties: {
-    intro: "Capital is committed before you arrive. Bounties are won on the stage, not in a spreadsheet.",
-    // TODO_BOUNTIES: real amounts + sponsors. sponsorSlug links the logo via /go/<slug>.
-    pool: "$50,000+",
+    intro: "Each ecosystem brings its own capital. Bounties are won on the stage, not in a spreadsheet.",
+    // TODO_BOUNTIES: confirm amounts + sponsors. sponsorSlug links the logo via /go/<slug>.
+    pool: "$100K+",
     items: [
-      { amount: "$15,000", title: "Best Lightning experience", sponsor: "Fulgur Ventures", sponsorSlug: "fulgur" },
-      { amount: "$15,000", title: "Hardest on-chain problem, solved", sponsor: "TODO_SPONSOR" },
-      { amount: "$10,000", title: "Most useful tool for builders", sponsor: "TODO_SPONSOR" },
-      { amount: "$10,000", title: "Judges' pick", sponsor: "TODO_SPONSOR" },
+      { amount: "$30,000", title: "Best Base app", sponsor: "Base", sponsorSlug: "base" },
+      { amount: "$30,000", title: "Best Solana app", sponsor: "Solana", sponsorSlug: "solana" },
+      { amount: "$30,000", title: "Best Bitcoin / Lightning build", sponsor: "Fulgur Ventures", sponsorSlug: "bitcoin" },
+      { amount: "$10,000", title: "Best cross-ecosystem build", sponsor: "The Arc", sponsorSlug: "arc" },
     ] satisfies Bounty[],
   },
 
-  /* ---- run of show: the produced-experience curve (Doors → Finale) ---- */
+  /* ---- run of show: the produced-experience curve (Doors to Finale) ---- */
   runOfShow: [
     { time: "Fri 18:00", label: "Doors", detail: "Walk in, badge up, first real conversation. No milling, no lanyard limbo." },
     { time: "Fri 19:00", label: "Kickoff", detail: "Lights down. The problem set, the bounties, and the clock, presented like a premiere, not a briefing." },
-    { time: "36 hrs", label: "The Build", detail: "Heads-down. Mentors on the floor, capital in the room, checkpoints that keep the energy from sagging." },
-    { time: "Sun 14:00", label: "Demo Theater", detail: "Every team on a real stage with real production. The audience is judges, founders, and investors, not a hallway." },
-    { time: "Sun 17:00", label: "Judging", detail: "Live and on the record. Scored against problems that matter, not slide polish." },
-    { time: "Sun 19:00", label: "The Finale", detail: "Bounties awarded, capital conversations opened, the night documented. You leave with momentum, not a tote bag." },
+    { time: "The weekend", label: "The Build", detail: "Heads-down. Mentors on the floor, capital in the room, checkpoints that keep the energy from sagging." },
+    { time: "Sat 14:00", label: "Demo Theater", detail: "Every team on a real stage with real production. The audience is judges, founders, and investors, not a hallway." },
+    { time: "Sat 17:00", label: "Judging", detail: "Live and on the record. Scored against problems that matter, not slide polish." },
+    { time: "Sat 19:00", label: "The Finale", detail: "Bounties awarded, capital conversations opened, the night documented. You leave with momentum, not a tote bag." },
   ] satisfies Beat[],
 
-  /* ---- judges + mentors (grid fills in as people confirm) ---- */
-  // TODO_JUDGES / TODO_MENTORS: replace placeholders as names lock.
+  /* ---- judges + mentors (fill in as people confirm) ---- */
   judges: [
     { name: "To be announced", role: "Judge", confirmed: false },
     { name: "To be announced", role: "Judge", confirmed: false },
@@ -154,46 +146,42 @@ export const event = {
     { name: "To be announced", role: "Mentor", confirmed: false },
   ] satisfies Person[],
 
-  /* ---- partners + sponsors (co-hosts shown equal; sponsor slots fill in) ---- */
+  /* ---- partners + sponsors (Arc hosts; ecosystems shown equal; slots fill in) ---- */
   partners: [
-    { name: "Viber", slug: "viber", tier: "Co-host" },
-    { name: "The Arc", slug: "arc", tier: "Co-host" },
-    { name: "Fulgur Ventures", slug: "fulgur", tier: "Co-host" },
+    { name: "The Arc", slug: "arc", tier: "Host" },
+    { name: "Base", slug: "base", tier: "Ecosystem" },
+    { name: "Solana", slug: "solana", tier: "Ecosystem" },
+    { name: "Bitcoin / Fulgur", slug: "bitcoin", tier: "Ecosystem" },
     // TODO_SPONSORS: add sponsors with a `slug` present in `links` so clicks are tracked.
     { name: "Sponsor slot", tier: "Sponsor" },
     { name: "Sponsor slot", tier: "Sponsor" },
     { name: "Sponsor slot", tier: "Sponsor" },
   ] satisfies Partner[],
 
-  /* ---- RSVP: the single most important conversion point ----
-   * mode: "email"    -> on-site capture via Resend (/api/subscribe)
-   *       "embed"    -> drop in a Luma/Tally iframe (embedUrl)
-   *       "redirect" -> button bounces through /rsvp to `destination`
-   * Swap the backend by changing `mode` + `destination`, markup stays put. */
+  /* ---- RSVP: mode "email" | "embed" | "redirect" ---- */
   rsvp: {
     mode: "email" as "email" | "embed" | "redirect",
     // TODO_RSVP_DESTINATION: the owned short link /rsvp (and /door) 302s here.
-    destination: "https://lu.ma/TODO_CRUCIBLE",
-    // TODO_RSVP_EMBED: only used when mode === "embed"
+    destination: "https://lu.ma/TODO_ARC_OPEN",
     embedUrl: "https://lu.ma/embed/event/TODO/simple",
   },
 
-  /* ---- contact + social (footer) ---- */
+  /* ---- contact + social ---- */
   contact: {
-    // TODO_CONTACT
-    email: "hello@crucible.camp",
-    press: "press@crucible.camp",
+    // TODO_CONTACT: confirm Arc's addresses + socials
+    email: "hello@thearccity.com",
+    press: "press@thearccity.com",
     social: {
-      x: "https://x.com/TODO_CRUCIBLE",
-      telegram: "https://t.me/TODO_CRUCIBLE",
+      x: "https://x.com/TODO_ARC",
+      telegram: "https://t.me/TODO_ARC",
     },
   },
 
   /* ---- SEO ---- */
   seo: {
-    url: "https://crucible.camp",
+    url: "https://archackathon.vercel.app",
     description:
-      "CRUCIBLE, a directed 36-hour Bitcoin hackathon at Network School. Builders, founders, and capital in one room. Fully documented and livestreamed.",
+      "Arc Open, a directed multi-ecosystem hackathon hosted by The Arc. The best builders on Base, Solana, and Bitcoin, one weekend, one room. Documented and livestreamed.",
   },
 };
 

@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
  */
 export function GET() {
   const dest = new URL(event.rsvp.destination);
-  dest.searchParams.set("utm_source", "crucible.camp");
+  dest.searchParams.set("utm_source", "arc-open");
   dest.searchParams.set("utm_medium", "door-qr");
   dest.searchParams.set("utm_campaign", "walk-in");
   dest.searchParams.set("source", "door");
