@@ -107,7 +107,7 @@ a { color: inherit; text-decoration: none; }
 }
 .brand { display: inline-flex; align-items: center; gap: 0.55rem; }
 .brand-word {
-  font-family: "Archivo Expanded", sans-serif; font-weight: 800;
+  font-family: "Archivo", sans-serif; font-stretch: 125%; font-weight: 800;
   font-size: 1.02rem; letter-spacing: 0.04em;
 }
 .brand-glyph {
@@ -145,10 +145,10 @@ a { color: inherit; text-decoration: none; }
 
 /* ---- THE SIGNATURE: the wordmark forges ---- */
 .wordmark {
-  font-family: "Archivo Expanded", sans-serif;
+  font-family: "Archivo", sans-serif; font-stretch: 125%;
   font-weight: 900;
-  font-size: clamp(3.6rem, 17vw, 13rem);
-  line-height: 0.86;
+  font-size: clamp(2.35rem, 11.2vw, 9.5rem);
+  line-height: 0.88;
   letter-spacing: -0.012em;
   margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
   /* forged (final / reduced-motion) state lives here so it's the default truth */
@@ -249,7 +249,7 @@ a { color: inherit; text-decoration: none; }
 .sec-label { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-faint); }
 .sec-body { max-width: 64ch; }
 .sec-h {
-  font-family: "Archivo Expanded", sans-serif; font-weight: 700;
+  font-family: "Archivo", sans-serif; font-stretch: 125%; font-weight: 700;
   font-size: clamp(1.6rem, 1.1rem + 2vw, 2.9rem); line-height: 1.08;
   letter-spacing: -0.01em; text-wrap: balance; margin-bottom: 1.25rem;
 }
@@ -271,7 +271,7 @@ a { color: inherit; text-decoration: none; }
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 3vw, 2.5rem); margin: 0 0 2rem; }
 .stat { display: flex; flex-direction: column; gap: 0.35rem; }
 .stat-num {
-  font-family: "Archivo Expanded", sans-serif; font-weight: 800;
+  font-family: "Archivo", sans-serif; font-stretch: 125%; font-weight: 800;
   font-size: clamp(2.8rem, 1.5rem + 7vw, 6.5rem); line-height: 0.9; letter-spacing: -0.02em;
   background: var(--heat-grad); background-size: 100% 200%; background-position: 50% 30%;
   -webkit-background-clip: text; background-clip: text; color: transparent;
@@ -303,7 +303,7 @@ a { color: inherit; text-decoration: none; }
 .request-inner { max-width: 640px; margin-inline: auto; text-align: center; }
 .request .kicker { margin-bottom: 1.25rem; }
 .request-h {
-  font-family: "Archivo Expanded", sans-serif; font-weight: 800;
+  font-family: "Archivo", sans-serif; font-stretch: 125%; font-weight: 800;
   font-size: clamp(2.2rem, 1.4rem + 4vw, 4.5rem); line-height: 0.98; letter-spacing: -0.015em;
   margin-bottom: 1rem;
 }

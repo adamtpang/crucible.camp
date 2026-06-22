@@ -4,6 +4,9 @@ node_modules/
 # vercel
 .vercel/
 
+# local preview tooling (see README for `npx serve`)
+.claude/
+
 # os / editor cruft
 .DS_Store
 Thumbs.db
