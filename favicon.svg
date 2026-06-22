@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Crucible">
+  <defs>
+    <linearGradient id="heat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff4e6"/>
+      <stop offset="0.28" stop-color="#ffd27a"/>
+      <stop offset="0.55" stop-color="#ff5a1f"/>
+      <stop offset="1" stop-color="#8c1a06"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0a0c11"/>
+  <!-- alchemical fire / crucible glyph -->
+  <path d="M32 15 L50 47 H14 Z" fill="url(#heat)"/>
+  <circle cx="32" cy="40" r="5" fill="#fff4e6" opacity="0.9"/>
+</svg>

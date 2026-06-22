@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="CRUCIBLE — a Bitcoin hackathon at Network School">
+  <defs>
+    <linearGradient id="heat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff4e6"/>
+      <stop offset="0.16" stop-color="#ffd27a"/>
+      <stop offset="0.42" stop-color="#ff9d2f"/>
+      <stop offset="0.66" stop-color="#ff5a1f"/>
+      <stop offset="0.86" stop-color="#d92b09"/>
+      <stop offset="1" stop-color="#8c1a06"/>
+    </linearGradient>
+    <linearGradient id="heatbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8c1a06"/>
+      <stop offset="0.25" stop-color="#d92b09"/>
+      <stop offset="0.5" stop-color="#ff5a1f"/>
+      <stop offset="0.72" stop-color="#ff9d2f"/>
+      <stop offset="0.88" stop-color="#ffd27a"/>
+      <stop offset="1" stop-color="#fff4e6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.32" cy="0.95" r="0.8">
+      <stop offset="0" stop-color="#ff5a1f" stop-opacity="0.34"/>
+      <stop offset="0.5" stop-color="#d92b09" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#0a0c11" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0a0c11"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- glyph + kicker -->
+  <g transform="translate(80 92)">
+    <path d="M16 0 L40 42 H-8 Z" fill="url(#heat)"/>
+    <text x="64" y="30" font-family="'IBM Plex Mono', monospace" font-size="22" letter-spacing="6" fill="#9aa3b4">BITCOIN HACKATHON &#183; NETWORK SCHOOL</text>
+  </g>
+
+  <!-- wordmark -->
+  <text x="76" y="340" font-family="'Archivo Expanded','Archivo Black','Arial Black',sans-serif" font-weight="900" font-size="190" letter-spacing="-2" fill="url(#heat)">CRUCIBLE</text>
+
+  <!-- thesis -->
+  <text x="80" y="420" font-family="'Archivo','Helvetica Neue',sans-serif" font-weight="500" font-size="38" fill="#e9ecf2">36 hours. The best builders in Bitcoin.</text>
+  <text x="80" y="470" font-family="'Archivo','Helvetica Neue',sans-serif" font-weight="500" font-size="38" fill="#9aa3b4">Real problems, real capital, one room.</text>
+
+  <!-- heat bar + footer -->
+  <rect x="80" y="540" width="1040" height="6" rx="3" fill="url(#heatbar)"/>
+  <text x="80" y="592" font-family="'IBM Plex Mono', monospace" font-size="22" letter-spacing="3" fill="#6a7384">CRUCIBLE.CAMP</text>
+  <text x="1120" y="592" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="22" letter-spacing="3" fill="#6a7384">36-HOUR BUILD &#183; DEMO DAY</text>
+</svg>

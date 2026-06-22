@@ -1,0 +1,231 @@
+<!doctype html>
+<!--
+  CRUCIBLE — Bitcoin hackathon at Network School
+  ------------------------------------------------------------------
+  DESIGN CONCEPT: "Cold steel, forged hot."
+  Disciplined cold-charcoal base (faint blue undertone = unheated steel)
+  against ONE accent system: the real blackbody color ramp metal passes
+  through as it heats (dull ember red -> orange -> amber -> white-hot).
+  No flames, no lava clip-art. The heat is the physics of forging.
+
+  SIGNATURE ELEMENT: the CRUCIBLE wordmark forges on load — heats from
+  cold dark steel up the true temperature ramp to a white-hot flash, then
+  settles to a sustained glowing amber. Executed once, executed well.
+  (Respects prefers-reduced-motion: renders the forged state, no motion.)
+
+  Type: Archivo Expanded (display) · IBM Plex Mono (instrument/labels) · Archivo (body)
+  ------------------------------------------------------------------
+  CONTENT SWAPS — search this file for "TODO_" to find everything to fill in.
+-->
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0a0c11" />
+
+  <title>CRUCIBLE — A Bitcoin hackathon at Network School</title>
+  <meta name="description" content="36 hours. The best builders in Bitcoin. Real problems, real capital, one room. A hackathon at Network School — fully documented and livestreamed." />
+
+  <!-- Open Graph / social card (the link will get shared in Telegram & X — make it count) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CRUCIBLE — A Bitcoin hackathon at Network School" />
+  <meta property="og:description" content="36 hours. The best builders in Bitcoin. Real problems, real capital, one room." />
+  <meta property="og:url" content="https://crucible.camp" />
+  <meta property="og:image" content="https://crucible.camp/og.svg" /> <!-- TODO_OG: optionally export og.svg -> og.png (1200x630) for max platform compatibility, then point this at /og.png -->
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CRUCIBLE — A Bitcoin hackathon at Network School" />
+  <meta name="twitter:description" content="36 hours. The best builders in Bitcoin. Real problems, real capital, one room." />
+  <meta name="twitter:image" content="https://crucible.camp/og.svg" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://crucible.camp" />
+
+  <!-- Flip no-js -> js before paint so reveal-on-scroll never hides content when JS is off -->
+  <script>document.documentElement.className = document.documentElement.className.replace('no-js','js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Expanded:wght@600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#request">Skip to request form</a>
+
+  <!-- Atmosphere layers (decorative) -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-head">
+    <a class="brand" href="#top" aria-label="Crucible — home">
+      <span class="brand-glyph" aria-hidden="true">&#9650;</span>
+      <span class="brand-word">CRUCIBLE</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <span class="nav-meta">NETWORK SCHOOL</span>
+      <a class="nav-cta" href="#request">Request to build <span aria-hidden="true">&rarr;</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============================= HERO ============================= -->
+    <section class="hero" aria-labelledby="wordmark">
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <p class="kicker hero-kicker">BITCOIN HACKATHON &middot; NETWORK SCHOOL</p>
+
+      <h1 id="wordmark" class="wordmark" data-text="CRUCIBLE">CRUCIBLE</h1>
+
+      <!-- TODO_THESIS: one-line thesis. Current copy is the brief's placeholder; tighten or replace. -->
+      <p class="thesis">36 hours. The best builders in Bitcoin.<br class="thesis-br" /> Real problems, real capital, one room.</p>
+
+      <!-- Instrument readout: dates / location / format -->
+      <dl class="readout" aria-label="Event details">
+        <div class="readout-cell">
+          <dt>Date</dt>
+          <!-- TODO_DATE: set the real dates, e.g. "14–15 SEP 2026" -->
+          <dd>NEXT MONTH &middot; TBA</dd>
+        </div>
+        <div class="readout-cell">
+          <dt>Location</dt>
+          <dd>NETWORK SCHOOL</dd>
+        </div>
+        <div class="readout-cell">
+          <dt>Format</dt>
+          <dd>36-HOUR BUILD &middot; DEMO DAY</dd>
+        </div>
+      </dl>
+
+      <!-- Heat scale: the accent system, made literal. Quiet brand detail, not a second animation. -->
+      <figure class="heatbar" aria-hidden="true">
+        <div class="heatbar-track"></div>
+        <figcaption class="heatbar-scale">
+          <span>COLD STEEL</span>
+          <span>1538&deg;C &middot; IRON MELTS</span>
+          <span>WHITE-HOT</span>
+        </figcaption>
+      </figure>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#request">Request to build</a>
+        <a class="btn btn-ghost" href="#what">What this is <span aria-hidden="true">&darr;</span></a>
+      </div>
+    </section>
+
+    <!-- ============================= 01 — WHAT IT IS ============================= -->
+    <section class="sec reveal" id="what" aria-labelledby="what-h">
+      <div class="sec-rail"><span class="sec-no">01</span><span class="sec-label">What it is</span></div>
+      <div class="sec-body">
+        <h2 id="what-h" class="sec-h">A crucible is where raw material meets enough heat and pressure to become something else.</h2>
+        <p class="lede">Same idea, fewer apologies. Crucible is a 36-hour Bitcoin hackathon at Network School — builders, founders, and capital in one room, working on problems that are actually worth solving. Fully documented. Livestreamed start to finish.</p>
+      </div>
+    </section>
+
+    <!-- ============================= 02 — WHO IT'S FOR ============================= -->
+    <section class="sec reveal" id="who" aria-labelledby="who-h">
+      <div class="sec-rail"><span class="sec-no">02</span><span class="sec-label">Who it's for</span></div>
+      <div class="sec-body">
+        <h2 id="who-h" class="sec-h">Three kinds of people. One room.</h2>
+        <ul class="cards">
+          <li class="card">
+            <p class="card-tag">BUILDERS</p>
+            <p class="card-text">Ship something real in 36 hours — Bitcoin, Lightning, and the hard problems around them. Bring your hands.</p>
+          </li>
+          <li class="card">
+            <p class="card-tag">FOUNDERS</p>
+            <p class="card-text">Bring the problem worth solving. Leave with a team that solved it, and a thing you can take to market.</p>
+          </li>
+          <li class="card">
+            <p class="card-tag">INVESTORS</p>
+            <p class="card-text">Capital in the room, not on a call. Meet the teams while the code is still warm — before everyone else does.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================= 03 — WHAT HAPPENS ============================= -->
+    <section class="sec reveal" id="happens" aria-labelledby="happens-h">
+      <div class="sec-rail"><span class="sec-no">03</span><span class="sec-label">What happens</span></div>
+      <div class="sec-body">
+        <h2 id="happens-h" class="sec-h">Heat, pressure, and a deadline.</h2>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-num">50</span>
+            <span class="stat-cap">teams, selected</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">36</span>
+            <span class="stat-cap">hours, no reset</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">1</span>
+            <span class="stat-cap">demo day that decides it</span>
+          </div>
+        </div>
+        <p class="lede">No tracks for the sake of tracks. No filler panels. You build, it gets documented, and on the final day you put it in front of the people who can fund it.</p>
+      </div>
+    </section>
+
+    <!-- ============================= 04 — THE BACKING ============================= -->
+    <section class="sec reveal" id="backing" aria-labelledby="backing-h">
+      <div class="sec-rail"><span class="sec-no">04</span><span class="sec-label">The backing</span></div>
+      <div class="sec-body">
+        <h2 id="backing-h" class="sec-h">Real capital, committed before you arrive.</h2>
+        <!-- TODO_PARTNERS: replace the line below + the placeholder logo row with real partners and the capital figure. -->
+        <p class="lede">Backed by a group of Bitcoin-native funds and operators, with capital committed to the teams that ship. Names and numbers announced soon.</p>
+        <ul class="partners" aria-label="Partners">
+          <li class="partner">PARTNER 01</li>
+          <li class="partner">PARTNER 02</li>
+          <li class="partner">PARTNER 03</li>
+          <li class="partner">PARTNER 04</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================= CTA — REQUEST TO BUILD ============================= -->
+    <section class="request reveal" id="request" aria-labelledby="request-h">
+      <div class="request-inner">
+        <p class="kicker">THE INTEREST LIST</p>
+        <h2 id="request-h" class="request-h">Request to build.</h2>
+        <p class="request-sub">Crucible is invite-tight. Leave an email and we'll send the brief and applications the moment they open.</p>
+
+        <!--
+          TODO_FORM_ENDPOINT: replace the action URL with your real endpoint.
+          Fastest path: create a form at https://formspree.io -> copy the form ID ->
+          set action to https://formspree.io/f/XXXXXXXX  (no other change needed).
+          JS posts via fetch for an inline success state; falls back to native POST if JS is off.
+        -->
+        <form id="request-form" class="form" action="https://formspree.io/f/TODO_FORM_ENDPOINT" method="POST" novalidate>
+          <div class="field">
+            <label class="visually-hidden" for="email">Email address</label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email"
+                   placeholder="you@domain.com" required />
+            <button class="btn btn-primary" type="submit" id="submit-btn">Request access</button>
+          </div>
+          <!-- honeypot: real people leave this empty; bots fill it -->
+          <input class="visually-hidden" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <p class="form-note">No spam. One email when applications open.</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <span class="foot-mark"><span class="brand-glyph" aria-hidden="true">&#9650;</span> CRUCIBLE</span>
+    <span class="foot-sep" aria-hidden="true">&middot;</span>
+    <span>Network School</span>
+    <span class="foot-sep" aria-hidden="true">&middot;</span>
+    <a href="https://crucible.camp">crucible.camp</a>
+    <!-- TODO_SOCIAL (optional): add X / Telegram links here, e.g. <a href="https://x.com/...">X</a> -->
+    <span class="foot-forged">Forged at Network School.</span>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>
