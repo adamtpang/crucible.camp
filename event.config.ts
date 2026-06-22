@@ -13,6 +13,7 @@ export type Bounty = { amount: string; title: string; sponsor?: string; sponsorS
 export type Person = { name: string; role: string; org?: string; confirmed?: boolean };
 export type CoHost = { name: string; slug: string; lane: string };
 export type Audience = { key: string; label: string; value: string; slug: string; cta: string; seats: string };
+export type Kpi = { value: string; label: string };
 export type Partner = { name: string; slug?: string; tier: string };
 export type CtaKind = "primary" | "secondary" | "ghost";
 export type LinkEntry = { label: string; destination: string; kind: CtaKind };
@@ -88,6 +89,18 @@ export const event = {
     { key: "incubators", label: "Incubators", value: "Source your next cohort under real pressure. Watch 50 teams build, then take the best ones home.", slug: "apply-incubator", cta: "Scout as an incubator", seats: "10 partner slots" },
     { key: "media", label: "Creators & media", value: "The story builds itself. Get the room, the footage, and the founders before anyone else has them.", slug: "apply-media", cta: "Apply for media access", seats: "12 media passes" },
   ] satisfies Audience[],
+
+  /* ---- KPI band: PROPOSED targets for edition one (not results). TODO_KPIS: tune. ---- */
+  kpis: {
+    caption: "A proposal for edition one. Targets, not promises.",
+    items: [
+      { value: "36", label: "hours, no reset" },
+      { value: "50", label: "teams, hand-selected" },
+      { value: "$100K+", label: "in bounties and pre-seed capital" },
+      { value: "2-4", label: "investable teams, the real metric" },
+      { value: "100%", label: "documented and livestreamed" },
+    ] satisfies Kpi[],
+  },
 
   /* ---- the pitch: why this is directed, not a room with deadlines ---- */
   pitch: [
