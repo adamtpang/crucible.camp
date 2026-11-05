@@ -14,7 +14,7 @@
     "qr": "node scripts/generate-qr.mjs"
   },
   "dependencies": {
-    "next": "^15.5.28",
+    "next": "^16.4.4",
     "react": "^19",
     "react-dom": "^19",
     "resend": "^4",
