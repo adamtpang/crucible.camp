@@ -31,7 +31,7 @@
     "tailwindcss": "^4",
     "@tailwindcss/postcss": "^4",
     "postcss": "^8",
-    "eslint": "^9",
+    "eslint": "^10",
     "eslint-config-next": "^15.5.28",
     "qrcode": "^1.5.4",
     "@types/qrcode": "^1.5.5"
